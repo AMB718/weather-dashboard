@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets\style.css">
     <!-- CSS only -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
@@ -24,12 +24,12 @@
           <form id="search-weather" class="border-bottom pb-3">
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label"
-                >City Name</label
+                >Search for a City:</label
               >
               <input
                 type="text"
                 class="form-control"
-                id="exampleFormControlInput1"
+                id="city-name"
                 placeholder="Flagstaff"
               />
             </div>
@@ -38,7 +38,76 @@
           <!-- Need recent search buttons to be placed here that are built off of an array that we have stored inside of localStorage -->
         </div>
         <!-- End Left Column -->
-        <div class="text-center col-md-9 h4">Weather Details</div>
+        <!-- <div class="text-center col-md-9 h4 ">Weather Details</div> -->
+        <div class="col-md-8 offset-md- justify-content-center" class="weather">
+      <!-- here we populate the 5 day forecast -->
+      <div class="card text-start">
+  <div class="card-header">
+    Weather Details
+  </div>
+  <div class="card-body" style="height: 260px">
+    <h3 class="card-title" id='inputtedName'></h3>
+    <ul>
+      <h6 id='temp'>Temp:</h6>
+      <h6 id='humidity'>Humidity:</h6>
+      <h6 id='wind'>Wind:</h6>
+      <h6 id='uvIndex'>UV Index:</h6>
+    </ul>
+  </div>
+  
+  </div>
+</div>
+</div>
+</div>
+<h3 class="title text-center mt-4 mb-4">5 day Forecast</h3>
+<div class="container">
+  <div class="row">
+    <!-- <div class='col-md-8 offset-md'> -->
+<div class="card" style="width: 15rem; height: 15rem">
+  <div class="card-body">
+    <h5 class="card-title">Tomorrow</h5>
+    <h6 id='tempOne'>Temp:</h6>
+      <h6 id='humidityOne'>Humidity:</h6>
+      <h6 id='windOne'>Wind:</h6>
+     
+  </div>
+</div>
+<div class="card" style="width: 15rem; height: 15rem">
+  <div class="card-body">
+    <h5 class="card-title">In Two Days</h5>
+     <h6 id='tempTwo'>Temp:</h6>
+      <h6 id='humidityTwo'>Humidity:</h6>
+      <h6 id='windTwo'>Wind:</h6>
+  </div>
+</div>
+<div class="card" style="width: 15rem; height: 15rem">
+  <div class="card-body">
+    <h5 class="card-title">In Three Days</h5>
+     <h6 id='tempThree'>Temp:</h6>
+      <h6 id='humidityThree'>Humidity:</h6>
+      <h6 id='windThree'>Wind:</h6>
+  </div>
+</div>
+<div class="card" style="width: 15rem; height: 15rem">
+  <div class="card-body">
+    <h5 class="card-title">In Four Days</h5>
+     <h6 id='tempFour'>Temp:</h6>
+      <h6i id='humidityFour'>Humidity:</h6i>
+      <h6 id='windFour'>Wind:</h6>
+  </div>
+</div>
+<div class="card" style="width: 15rem; height: 15rem">
+  <div class="card-body">
+    <h5 class="card-title">In Five Days</h5>
+    <h6 id='tempFive'>Temp:</h6>
+      <h6 id='humidityFive'>Humidity:</h6>
+      <h6 id='windFive'>Wind:</h6>
+  </div>
+</div>
+</div>
+</div>
+</div>
+        </div>
       </div>
     </div>
   </body>
