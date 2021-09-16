@@ -1,4 +1,4 @@
-# weather-dashboard
+# Weather Dashboard
 
 ## Description
 In this homework I was challenged in using API interaction to create a weather dashboard. 
