@@ -8,7 +8,7 @@ const geoEndpoint = "https://api.openweathermap.org/geo/1.0/direct?";
 // q={city name},{state code},{country code}&limit={limit}&appid={API key}
 
 // one call endpoint
-const onecallEndpoint = "http://api.openweathermap.org/data/2.5/onecall?";
+const onecallEndpoint = "https://api.openweathermap.org/data/2.5/onecall?";
 // lat={lat}&lon={lon}&exclude={part}&appid={API key}
 
 function getWeatherByCityName(city) {
