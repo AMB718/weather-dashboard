@@ -28,6 +28,7 @@ function getWeatherByCityName(city) {
       const cityDiv = document.getElementById("inputtedName");
       const cityElement = document.createElement("h3");
       cityElement.innerText = `${cityName}, ${cityState}`;
+      cityDiv.innerText = "";
       cityDiv.append(cityElement);
 
       const params = new URLSearchParams({
@@ -55,23 +56,28 @@ function buildDashboard(weather) {
   const currentWindSpeed = weather.current.wind_speed;
   // append temp
   const tempLi = document.getElementById("temp");
-  const tempElement = document.createElement("h6");
-  tempElement.innerText = `${currentTemp} °F`;
+  const tempElement = document.createElement("p");
+  //tempElement.setAttribute()
+  tempElement.innerText = ` Temp: ${currentTemp} °F`;
+  tempLi.textContent = "";
   tempLi.append(tempElement);
   // append humidity
   const humidityLi = document.getElementById("humidity");
   const humidityElement = document.createElement("h6");
-  humidityElement.innerText = `${currentHumidity} %`;
+  humidityElement.innerText = `Humidity: ${currentHumidity} %`;
+  humidityLi.textContent = "";
   humidityLi.append(humidityElement);
   // append wind
   const windLi = document.getElementById("wind");
   const windElement = document.createElement("h6");
-  windElement.innerText = `${currentWindSpeed} mph`;
+  windElement.innerText = `Wind: ${currentWindSpeed} mph`;
+  windLi.textContent = "";
   windLi.append(windElement);
   // append UV
   const uvLi = document.getElementById("uvIndex");
   const uvElement = document.createElement("h6");
-  uvElement.innerText = `${currentUV}`;
+  uvElement.innerText = `UVI: ${currentUV}`;
+  uvLi.textContent = "";
   uvLi.append(uvElement);
 
   // 5-day Forecast
@@ -83,17 +89,20 @@ function buildDashboard(weather) {
   // append day one temp
   const tempOne = document.getElementById("tempOne");
   const tempOneElement = document.createElement("h6");
-  tempOneElement.innerText = `${dayOneTempHigh} °F`;
+  tempOneElement.innerText = `Temp: ${dayOneTempHigh} °F`;
+  tempOne.innerText = "";
   tempOne.append(tempOneElement);
   // append day one humidity
   const humidityOne = document.getElementById("humidityOne");
   const humidityOneElement = document.createElement("h6");
-  humidityOneElement.innerText = `${dayOneHumidity} %`;
+  humidityOneElement.innerText = `Humidity: ${dayOneHumidity} %`;
+  humidityOne.innerText = "";
   humidityOne.append(humidityOneElement);
   // append day one wind
   const windOne = document.getElementById("windOne");
   const windOneElement = document.createElement("h6");
-  windOneElement.innerText = `${dayOneWindSpeed} mph`;
+  windOneElement.innerText = `Wind: ${dayOneWindSpeed} mph`;
+  windOne.innerText = "";
   windOne.append(windOneElement);
 
   // Day Two
@@ -103,17 +112,20 @@ function buildDashboard(weather) {
   // append day two temp
   const tempTwo = document.getElementById("tempTwo");
   const tempTwoElement = document.createElement("h6");
-  tempTwoElement.innerText = `${dayTwoTempHigh} °F`;
+  tempTwoElement.innerText = `Temp: ${dayTwoTempHigh} °F`;
+  tempTwo.innerText = "";
   tempTwo.append(tempTwoElement);
   // append day two humidity
   const humidityTwo = document.getElementById("humidityTwo");
   const humidityTwoElement = document.createElement("h6");
-  humidityTwoElement.innerText = `${dayTwoHumidity} %`;
+  humidityTwoElement.innerText = `Humidity: ${dayTwoHumidity} %`;
+  humidityTwo.innerText = "";
   humidityTwo.append(humidityTwoElement);
   // append day two wind
   const windTwo = document.getElementById("windTwo");
   const windTwoElement = document.createElement("h6");
-  windTwoElement.innerText = `${dayTwoWindSpeed} mph`;
+  windTwoElement.innerText = `Wind: ${dayTwoWindSpeed} mph`;
+  windTwo.innerText = "";
   windTwo.append(windTwoElement);
 
   //  Day Three
@@ -123,17 +135,20 @@ function buildDashboard(weather) {
   // append day three temp
   const tempThree = document.getElementById("tempThree");
   const tempThreeElement = document.createElement("h6");
-  tempThreeElement.innerText = `${dayThreeTempHigh} °F`;
+  tempThreeElement.innerText = `Temp: ${dayThreeTempHigh} °F`;
+  tempThree.innerText = "";
   tempThree.append(tempThreeElement);
   // append day three humidity
   const humidityThree = document.getElementById("humidityThree");
   const humidityThreeElement = document.createElement("h6");
-  humidityThreeElement.innerText = `${dayThreeHumidity} %`;
+  humidityThreeElement.innerText = `Humidity: ${dayThreeHumidity} %`;
+  humidityThree.innerText = "";
   humidityThree.append(humidityThreeElement);
   // append day three UV index
   const windThree = document.getElementById("windThree");
   const windThreeElement = document.createElement("h6");
-  windThreeElement.innerText = `${dayThreeWindSpeed} mph`;
+  windThreeElement.innerText = `Wind: ${dayThreeWindSpeed} mph`;
+  windThree.innerText = "";
   windThree.append(windThreeElement);
   // Day Four
   const dayFourTempHigh = weather.daily[4].temp.max;
@@ -142,17 +157,20 @@ function buildDashboard(weather) {
   // append day four temp
   const tempFour = document.getElementById("tempFour");
   const tempFourElement = document.createElement("h6");
-  tempFourElement.innerText = `${dayFourTempHigh} °F`;
+  tempFourElement.innerText = `Temp: ${dayFourTempHigh} °F`;
+  tempFour.innerText = "";
   tempFour.append(tempFourElement);
   // append day four humidity
   const humidityFour = document.getElementById("humidityFour");
   const humidityFourElement = document.createElement("h6");
-  humidityFourElement.innerText = `${dayFourHumidity} %`;
+  humidityFourElement.innerText = `Humidity: ${dayFourHumidity} %`;
+  humidityFour.innerText = "";
   humidityFour.append(humidityFourElement);
   // append day four wind
   const windFour = document.getElementById("windFour");
   const windFourElement = document.createElement("h6");
-  windFourElement.innerText = `${dayFourWindSpeed} mph`;
+  windFourElement.innerText = `Wind: ${dayFourWindSpeed} mph`;
+  windFour.innerText = "";
   windFour.append(windFourElement);
 
   // Day Five
@@ -162,17 +180,20 @@ function buildDashboard(weather) {
   // append day five temp
   const tempFive = document.getElementById("tempFive");
   const tempFiveElement = document.createElement("h6");
-  tempFiveElement.innerText = `${dayFiveTempHigh}°F`;
+  tempFiveElement.innerText = `Temp: ${dayFiveTempHigh}°F`;
+  tempFive.innerText = "";
   tempFive.append(tempFiveElement);
   // append day five humidity
   const humidityFive = document.getElementById("humidityFive");
   const humidityFiveElement = document.createElement("h6");
-  humidityFiveElement.innerText = `${dayFiveHumidity} %`;
+  humidityFiveElement.innerText = `Humidity: ${dayFiveHumidity} %`;
+  humidityFive.innerText = "";
   humidityFive.append(humidityFiveElement);
   // append day five wind speed
   const windFive = document.getElementById("windFive");
   const windFiveElement = document.createElement("h6");
-  windFiveElement.innerText = `${dayFiveWindSpeed} mph`;
+  windFiveElement.innerText = `Wind: ${dayFiveWindSpeed} mph`;
+  windFive.innerText = "";
   windFive.append(windFiveElement);
 }
 
@@ -186,6 +207,10 @@ form.addEventListener("submit", function (event) {
 
   // Fetch weather data
   getWeatherByCityName(city);
+  //  create a function to save weather data into local storage
+
+  //  crate another function to retrieve the data from local storage
+
   // where are we going to source our data
   // what does the api need to find our city
   // populate our weather details
